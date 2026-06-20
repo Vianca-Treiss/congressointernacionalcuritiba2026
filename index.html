@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem-vindo ao Congresso Internacional 2026 — Informações do Alfajor</title>
     <style>
-        /* AJUSTE DEFINITIVO: MOSTRAR A IMAGEM INTEIRA SEM ZOOM E SEM REPETIR */
+        /* TELA CHEIA ADAPTADA PARA O FORMATO DO CELULAR (VERTICAL) */
         html, body {
             margin: 0;
             padding: 0;
             background-image: url('imagem.png');
-            background-size: 100% auto; /* Faz a imagem caber inteira na largura do celular, sem zoom */
-            background-position: top center; /* Alinha o desenho perfeitamente no topo */
-            background-repeat: no-repeat; /* PROIBIDO DUPLICAR: a imagem aparece uma única vez */
-            background-attachment: scroll; /* Permite que o fundo acompanhe o início da página naturalmente */
-            background-color: #f4f6f4; /* Cor de fundo suave (puxada pro verde/cinza do tema) para o restante da tela */
+            background-size: cover; /* Força a imagem a ocupar a tela inteira */
+            background-position: center center; /* Centraliza a capivara e os logos na tela */
+            background-repeat: no-repeat; /* Não deixa a imagem ficar repetindo */
+            background-attachment: fixed; /* Deixa o fundo travado enquanto o texto rola por cima */
+            background-color: #f4f6f4; 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #2b1d11; 
@@ -22,9 +22,9 @@
             overflow-x: hidden;
         }
 
-        /* Camada para dar uma leve transparência no topo e total leitura no decorrer da página */
+        /* Camada translúcida suave para garantir que o texto seja legível sobre a imagem cheia */
         .container {
-            background: linear-gradient(to bottom, rgba(244, 246, 244, 0.4) 0%, rgba(244, 246, 244, 0.85) 300px, #f4f6f4 100%);
+            background-color: rgba(244, 246, 244, 0.65); 
             padding: 10px 0px 40px 0px;
             width: 100%;
             box-sizing: border-box;
@@ -72,7 +72,7 @@
             margin-bottom: 20px;
         }
 
-        /* FOTO DO CASAL COM SOMBRA E BORDA ELEGANTE */
+        /* FOTO DO CASAL COM BORDA */
         .foto-perfil-topo {
             display: block;
             margin: 0 auto 20px auto;
@@ -85,7 +85,7 @@
             object-fit: cover; 
         }
 
-        /* TÍTULOS COM LEITURA IMPECÁVEL */
+        /* TÍTULOS COM LEITURA GARANTIDA */
         .titulo-pt {
             color: #3c2415; 
             font-size: 26px; 
@@ -94,7 +94,7 @@
             line-height: 1.2;
             text-align: center;
             width: 100%;
-            text-shadow: 2px 2px 4px rgba(255,255,255,1); /* Garante leitura 100% nítida */
+            text-shadow: 2px 2px 4px rgba(255,255,255,1); 
         }
         .titulo-en {
             color: #5c3a21; 
@@ -115,6 +115,7 @@
             font-size: 19px;
             text-align: center;
             width: 100%;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
         }
         
         .subtitulo-en {
@@ -125,15 +126,16 @@
             font-size: 17px;
             text-align: center;
             width: 100%;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
         }
 
-        /* CARD DE MENSAGEM SÓLIDO PARA NÃO EMBALHAR COM O FUNDO */
+        /* CARD DE MENSAGEM */
         .mensagem {
             font-size: 15px;
             color: #3c2415;
             text-align: justify;
             margin: 0 5px 35px 5px;
-            background-color: rgba(255, 255, 255, 0.95); 
+            background-color: rgba(255, 255, 255, 0.93); 
             padding: 18px;
             border-radius: 12px;
             border-left: 5px solid #1a5c27; 
@@ -151,6 +153,7 @@
             color: #3c2415;
             font-size: 18px;
             margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
         }
         .ingrediente-item {
             margin-bottom: 10px;
@@ -186,7 +189,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 10px 0 30px 0;
+            padding: 10px 0 40px 0;
         }
 
         .video-player {
@@ -198,15 +201,11 @@
             border: 4px solid #1a5c27; 
         }
 
-        /* COMPORTAMENTO EXCLUSIVO PARA COMPUTADORES (TELAS LARGAS) */
-        @media (min-width: 769px) {
+        /* RE REGULAGEM ESPECÍFICA PARA CELULARES */
+        @media (max-width: 480px) {
             html, body {
-                background-size: cover; /* No PC a imagem expande perfeitamente por ser horizontal */
+                background-size: 100% 100%; /* Força a imagem a se moldar no formato exato "em pé" do celular */
                 background-position: center center;
-                background-attachment: fixed;
-            }
-            .container {
-                background: rgba(244, 246, 244, 0.4);
             }
         }
     </style>
