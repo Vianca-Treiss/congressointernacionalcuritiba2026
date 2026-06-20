@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem-vindo ao Congresso Internacional 2026 — Informações do Alfajor</title>
     <style>
-        /* AJUSTE PARA ENCHER A TELA SEM EXPANDIR OU DOFORMAR A IMAGEM */
+        /* CONFIGURAÇÃO DO FUNDO SEM REPETIÇÃO E ADAPTADO PARA CELULAR */
         html, body {
             margin: 0;
             padding: 0;
             background-image: url('imagem.png');
-            /* 100% garante que ela ocupe toda a largura do celular, e o 'auto' impede o zoom exagerado */
-            background-size: 100% auto;
-            background-position: top center; 
-            background-repeat: repeat-y; /* Permite que o fundo preencha a tela até o final se o texto for longo */
-            background-attachment: fixed; /* Mantém o fundo estático e paradinho lá atrás */
-            background-color: #f7f6f2; 
+            background-size: 100% auto; /* Ajusta perfeitamente à largura sem deformar */
+            background-position: center bottom; /* Mantém a grama e o rio sempre na base da tela */
+            background-repeat: no-repeat; /* IMPEDE TOTALMENTE A REPETIÇÃO DA IMAGEM */
+            background-attachment: fixed; /* Mantém o fundo estático enquanto o texto rola */
+            background-color: #f7f6f2; /* Cor oficial off-white que preenche o resto da tela */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #2b1d11; 
@@ -23,9 +22,9 @@
             overflow-x: hidden;
         }
 
-        /* Camada leve e translúcida para não apagar o fundo e manter a leitura excelente */
+        /* Camada leve para dar leitura sem esconder a paisagem do fundo */
         .container {
-            background-color: rgba(247, 246, 242, 0.45); 
+            background-color: rgba(247, 246, 242, 0.3); /* Bem transparente para ver o fundo original */
             padding: 10px 0px 40px 0px;
             width: 100%;
             box-sizing: border-box;
@@ -73,50 +72,50 @@
             margin-bottom: 20px;
         }
 
-        /* FOTO DE VOCÊS CENTRALIZADA */
+        /* FOTO DO CASAL REVISADA */
         .foto-perfil-topo {
             display: block;
             margin: 0 auto 20px auto;
             width: 100%;
-            max-width: 220px; 
+            max-width: 240px; /* Tamanho ideal para destacar o casal */
             height: auto; 
-            border-radius: 12px; 
+            border-radius: 16px; 
             border: 4px solid #3c2415; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
             object-fit: cover; 
         }
 
-        /* TÍTULOS COM O MARROM DA IMAGEM */
+        /* TÍTULOS COM DESTAQUE E LEITURA PERFEITA */
         .titulo-pt {
             color: #3c2415; 
-            font-size: 28px; 
+            font-size: 26px; 
             font-weight: bold;
             margin: 0 auto 8px auto;
             line-height: 1.2;
             text-align: center;
             width: 100%;
-            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.9); /* Sombra clara para garantir leitura sobre o fundo */
         }
         .titulo-en {
             color: #5c3a21; 
-            font-size: 22px; 
+            font-size: 20px; 
             font-weight: normal;
             margin: 0 auto 20px auto;
             line-height: 1.2;
             text-align: center;
             width: 100%;
-            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.9);
         }
 
-        /* SUBTÍTULOS COM O VERDE DA IMAGEM */
         .subtitulo-pt {
             font-style: italic;
             color: #1a5c27; 
             margin: 15px auto 5px auto;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 19px;
             text-align: center;
             width: 100%;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
         }
         
         .subtitulo-en {
@@ -124,22 +123,23 @@
             color: #277336; 
             margin: 0 auto 25px auto;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 17px;
             text-align: center;
             width: 100%;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
         }
 
-        /* CAIXA DE MENSAGEM */
+        /* CAIXAS DE CONTEXTO COM PROTEÇÃO BRANCA TRANSLÚCIDA */
         .mensagem {
             font-size: 15px;
             color: #3c2415;
             text-align: justify;
             margin: 0 5px 35px 5px;
-            background-color: rgba(255, 255, 255, 0.88); 
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #1a5c27; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            background-color: rgba(255, 255, 255, 0.90); /* Garante que o texto seja legível mesmo com desenhos atrás */
+            padding: 18px;
+            border-radius: 12px;
+            border-left: 5px solid #1a5c27; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
         }
 
         /* SEÇÃO INGREDIENTES */
@@ -153,23 +153,25 @@
             color: #3c2415;
             font-size: 18px;
             margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
         }
         .ingrediente-item {
             margin-bottom: 10px;
             font-size: 14px;
-            background-color: rgba(255, 255, 255, 0.7); 
-            padding: 6px 10px;
-            border-radius: 6px;
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 8px 12px;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.02);
         }
         
         /* ALERTA INSPIRADO NO AZUL DO RIO */
         .alerta-alergia {
             background-color: rgba(230, 244, 250, 0.95); 
             padding: 15px;
-            border-radius: 8px;
+            border-radius: 10px;
             border: 1px solid #bce1f2;
             margin-top: 25px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
         }
         .alerta-alergia h3 {
             color: #0077b6; 
@@ -189,7 +191,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 10px 0;
+            padding: 10px 0 50px 0; /* Espaço extra no fim para a rolagem passar da grama */
         }
 
         .video-player {
@@ -199,6 +201,14 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.3);
             background-color: #000;
             border: 4px solid #1a5c27; 
+        }
+
+        /* COMPATIBILIDADE EXTRA PARA TELAS EM PÉ (CELULARES) */
+        @media (max-width: 768px) {
+            html, body {
+                background-size: auto 100%; /* Em celulares compridos, garante que cubra de cima a baixo sem cortar */
+                background-position: center bottom;
+            }
         }
     </style>
 </head>
@@ -215,6 +225,7 @@
         <div class="conteudo-responsivo">
             
             <div class="topo-perfil">
+                <!-- Foto do Casal Lado a Lado -->
                 <img src="fotoeuemor.png.jpeg" alt="Foto de Boas-Vindas" class="foto-perfil-topo">
                 
                 <h1 class="titulo-pt">Bem-vindo ao Congresso Internacional</h1>
