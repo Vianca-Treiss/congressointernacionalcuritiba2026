@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao Congresso Internacional 2026 — Informações do Alfajor</title>
+    <style>
+        /* AJUSTE PARA ENCHER A TELA SEM EXPANDIR OU DOFORMAR A IMAGEM */
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-image: url('imagem.png');
+            /* 100% garante que ela ocupe toda a largura do celular, e o 'auto' impede o zoom exagerado */
+            background-size: 100% auto;
+            background-position: top center; 
+            background-repeat: repeat-y; /* Permite que o fundo preencha a tela até o final se o texto for longo */
+            background-attachment: fixed; /* Mantém o fundo estático e paradinho lá atrás */
+            background-color: #f7f6f2; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2b1d11; 
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Camada leve e translúcida para não apagar o fundo e manter a leitura excelente */
+        .container {
+            background-color: rgba(247, 246, 242, 0.45); 
+            padding: 10px 0px 40px 0px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+        .conteudo-responsivo {
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+        
+        /* LETREIRO EM MOVIMENTO */
+        .area-letreiro {
+            width: 100%;
+            overflow: hidden;
+            background-color: rgba(235, 242, 235, 0.90); 
+            padding: 10px 0;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #1a5c27; 
+        }
+
+        .texto-movel {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            animation: letreiro-corrido 22s linear infinite;
+            color: #1a5c27;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        @keyframes letreiro-corrido {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        .topo-perfil {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 15px; 
+            margin-bottom: 20px;
+        }
+
+        /* FOTO DE VOCÊS CENTRALIZADA */
+        .foto-perfil-topo {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 100%;
+            max-width: 220px; 
+            height: auto; 
+            border-radius: 12px; 
+            border: 4px solid #3c2415; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            object-fit: cover; 
+        }
+
+        /* TÍTULOS COM O MARROM DA IMAGEM */
+        .titulo-pt {
+            color: #3c2415; 
+            font-size: 28px; 
+            font-weight: bold;
+            margin: 0 auto 8px auto;
+            line-height: 1.2;
+            text-align: center;
+            width: 100%;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        }
+        .titulo-en {
+            color: #5c3a21; 
+            font-size: 22px; 
+            font-weight: normal;
+            margin: 0 auto 20px auto;
+            line-height: 1.2;
+            text-align: center;
+            width: 100%;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        }
+
+        /* SUBTÍTULOS COM O VERDE DA IMAGEM */
+        .subtitulo-pt {
+            font-style: italic;
+            color: #1a5c27; 
+            margin: 15px auto 5px auto;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .subtitulo-en {
+            font-style: italic;
+            color: #277336; 
+            margin: 0 auto 25px auto;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* CAIXA DE MENSAGEM */
+        .mensagem {
+            font-size: 15px;
+            color: #3c2415;
+            text-align: justify;
+            margin: 0 5px 35px 5px;
+            background-color: rgba(255, 255, 255, 0.88); 
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #1a5c27; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        /* SEÇÃO INGREDIENTES */
+        .secao-ingredientes {
+            text-align: left;
+            border-top: 2px dashed #cbd6cb;
+            padding: 25px 5px 0 5px;
+            margin-bottom: 30px;
+        }
+        .secao-ingredientes h2 {
+            color: #3c2415;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .ingrediente-item {
+            margin-bottom: 10px;
+            font-size: 14px;
+            background-color: rgba(255, 255, 255, 0.7); 
+            padding: 6px 10px;
+            border-radius: 6px;
+        }
+        
+        /* ALERTA INSPIRADO NO AZUL DO RIO */
+        .alerta-alergia {
+            background-color: rgba(230, 244, 250, 0.95); 
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #bce1f2;
+            margin-top: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .alerta-alergia h3 {
+            color: #0077b6; 
+            margin-top: 0;
+            font-size: 15px;
+        }
+        .alerta-alergia p {
+            margin: 0;
+            font-size: 13px;
+            font-weight: bold;
+            color: #2b1d11;
+        }
+
+        .container-video-final {
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .video-player {
+            width: 90%; 
+            max-width: 550px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            background-color: #000;
+            border: 4px solid #1a5c27; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="area-letreiro">
+            <div class="texto-movel">
+                ✨ Bem-vindo ao Congresso Internacional das Testemunhas de Jeová 2026! Welcome to the 2026 International Convention! • Dias 26, 27 e 28 ✨ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✨ Bem-vindo ao Congresso Internacional das Testemunhas de Jeová 2026! Welcome to the 2026 International Convention! • Dias 26, 27 e 28 ✨
+            </div>
+        </div>
+
+        <div class="conteudo-responsivo">
+            
+            <div class="topo-perfil">
+                <img src="fotoeuemor.png.jpeg" alt="Foto de Boas-Vindas" class="foto-perfil-topo">
+                
+                <h1 class="titulo-pt">Bem-vindo ao Congresso Internacional</h1>
+                <h2 class="titulo-en">Welcome to the International Convention</h2>
+            </div>
+
+            <hr style="width: 85%; border: 0; border-top: 1px solid #3c2415; margin-bottom: 15px;">
+
+            <p class="subtitulo-pt">Testemunhas de Jeová — 2026</p>
+            <p class="subtitulo-en">Jehovah's Witnesses — 2026</p>
+
+            <div class="mensagem">
+                Queridos irmãos e irmãs, é uma alegria imensa poder receber cada um de vocês neste congresso tão especial! Que estes dias 26, 27 e 28 de convivência e aprendizado espiritual sejam ricamente abençoados pelo nosso amoroso Pai, Jeová, e fortaleçam ainda mais o nosso amor e união fraternal em nossa grande família internacional.
+                <p style="color:#1a5c27; margin-top: 10px; margin-bottom: 15px;"><strong>Filipenses 2:2 "Se há, pois, algum encorajamento em Cristo, algum consolo de amor, algum companheirismo espiritual, algum terno sentimento e compaixão, Tornem plena a minha alegria por terem o mesmo modo de pensar e o mesmo amor, sendo plenamente unidos, tendo o mesmo pensamento".</strong></p> 
+                <p>Preparamos esta lembrancinha doce com muito carinho para adoçar os seus dias de congresso. Sejam muito bem-vindos!</p>
+                
+                <hr style="width: 30%; border: 0; border-top: 1px solid #1a5c27; margin-top: 15px; margin-bottom: 15px;">
+
+                <p>Dear brothers and sisters, it is a great joy to welcome each of you to this very special convention! May these days (26, 27, and 28) of fellowship and spiritual learning be richly blessed by our loving Father, Jehovah, and may it further strengthen our love and brotherly unity within our grand international family.</p>
+                <p style="color:#1a5c27; margin-top: 10px; margin-bottom: 15px;"><strong>Philippians 2:2 "If, then, there is any encouragement in Christ, any comfort of love, any spiritual fellowship, any tender affection and compassion, make my joy complete by having the same mindset and the same love, being fully united and of one mind."</strong></p>
+                <p>We have prepared this sweet treat with great care to brighten your days at the convention. A very warm welcome to you all!</p>
+            </div>
+
+            <div class="secao-ingredientes">
+                <h2>📋 Composição do Alfajor / Alfajor Composition</h2>
+                
+                <div class="ingrediente-item"><strong>Massa:</strong> Biscoito doce tipo Maria/Maizena (farinha de trigo enriquecida com ferro e ácido fólico, açúcar, gordura vegetal, amido de milho, soro de leite, sal).</div>
+                <div class="ingrediente-item"><strong>Recheio:</strong> Doce de soro de leite composto (soro de leite, açúcar, glicose e amido modificado).</div>
+                <div class="ingrediente-item"><strong>Cobertura:</strong> Cobertura fracionada sabor chocolate blend.</div>
+                <div class="ingrediente-item"><strong>Decoração:</strong> Granulado sabor chocolate e confeitos coloridos.</div>
+                
+                <hr style="border: 0; border-top: 1px dashed #cbd6cb; margin-top: 15px; margin-bottom: 15px;">
+
+                <div class="ingrediente-item"><strong>Dough:</strong> Sweet biscuit (Maria/Maizena style) (wheat flour enriched with iron and folic acid, sugar, vegetable fat, corn starch, whey, salt).</div>
+                <div class="ingrediente-item"><strong>Filling:</strong> Compound whey-based confection (whey, sugar, glucose, and modified starch).</div>
+                <div class="ingrediente-style ingrediente-item"><strong>Coating:</strong> Blend-flavor chocolate-style compound coating.</div>
+                <div class="ingrediente-item"><strong>Decoration:</strong> Chocolate-flavored sprinkles and colored sprinkles.</div>
+                
+                <div class="alerta-alergia">
+                    <h3>⚠️ ATENÇÃO ALÉRGICOS / ALLERGY INFORMATION:</h3>
+                    <p>CONTÉM GLÚTEN. CONTÉM LACTOSE.</p>
+                    <p>CONTAINS GLUTEN. CONTAINS LACTOSE.</p>
+                    
+                    <p style="margin-top: 5px;">CONTÉM DERIVADOS DE LEITE, TRIGO E SOJA.</p>
+                    <p>CONTAINS MILK, WHEAT, AND SOY DERIVATIVES.</p>
+                    
+                    <p style="font-weight: normal; font-style: italic; margin-top: 8px; color: #777;">Pode conter traços de amendoim. / May contain traces of peanuts.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-video-final">
+            <video class="video-player" controls>
+                <source src="meuvideo.mp4" type="video/mp4">
+                O seu navegador não suporta a reprodução de vídeos.
+            </video>
+        </div>
+        
+    </div>
+</body>
+</html>
